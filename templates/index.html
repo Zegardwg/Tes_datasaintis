@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BPS HLS CSV Export</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+    <div class="container">
+        <h2 class="mb-4">Export Angka Harapan Lama Sekolah (HLS) BPS - Tahun 2024</h2>
+        <a href="{{ url_for('get_bps_hls_csv') }}" class="btn btn-success mb-3">
+            Download CSV
+        </a>
+        <h5>Data Lengkap:</h5>
+        <div class="table-responsive">
+            {{ table_html | safe }}
+        </div>
+    </div>
+</body>
+</html>
