@@ -63,7 +63,7 @@ def main():
     try:
         driver.get('https://www.bps.go.id/id/statistics-table?subject=528')
 
-        # === STEP 1: Ambil mapping subjek → kategori → url ===
+        #Ambil mapping subjek - kategori - url 
         data_links = []
         for btn in driver.find_elements(By.CSS_SELECTOR, "button.transition-all"):
             try:
@@ -181,7 +181,7 @@ def main():
                         continue
 
                     error_or_reload = False
-                    # --- Cek Judul
+                    # Cek Judul
                     try:
                         full_title = WebDriverWait(driver, 5).until(
                             EC.visibility_of_element_located((By.CSS_SELECTOR, "h1.font-bold.text-xl.text-main-primary.mb-4"))
@@ -190,7 +190,7 @@ def main():
                         print("    [ERROR] Tidak bisa mengambil judul, reload halaman list!")
                         error_or_reload = True
 
-                    # --- Cek JSON
+                    #Cek JSON
                     endpoint = ""
                     if not error_or_reload:
                         try:
@@ -227,7 +227,7 @@ def main():
                         idx += 1
                         continue
 
-                    # --- Tutup popup JSON & kembali
+                    #Tutup popup JSON & kembali
                     for locator in [
                         (By.CSS_SELECTOR, "button svg.fa-xmark"),
                         (By.XPATH, "//button[contains(., 'Kembali')]")
@@ -239,7 +239,7 @@ def main():
                         except:
                             pass
 
-                    # --- Simpan hasil
+                    #Simpan hasil
                     results.append({
                         "subjek": subjek,
                         "kategori": kategori,

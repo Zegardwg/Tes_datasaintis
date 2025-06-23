@@ -13,7 +13,7 @@ def get_bps_data():
     if response.status_code != 200 or 'datacontent' not in data:
         raise Exception("Gagal mengambil data dari API BPS.")
 
-    # --- PARSING PROVINSI & KABUPATEN/KOTA ---
+    #PARSING PROVINSI & KABUPATEN/KOTA
     wilayah = {}
     current_prov = ""
     for item in data["vervar"]:
@@ -27,7 +27,7 @@ def get_bps_data():
                 "kabupaten_kota": label_clean
             }
 
-    # --- TAHUN & KODE GENDER ---
+    #TAHUN & KODE GENDER
     tahun_map = {str(item["val"]): item["label"] for item in data["tahun"]}
     kode_tahun_2024 = None
     for k, v in tahun_map.items():
@@ -40,7 +40,7 @@ def get_bps_data():
     kode_laki = "211"
     kode_perempuan = "212"
 
-    # --- BANGUN DATAFRAME ---
+    # BANGUN DATAFRAME
     data_rows = {}
     for k, v in data["datacontent"].items():
         wilayah_id = k[:4]
