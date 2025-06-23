@@ -38,8 +38,25 @@ Dari salah satu API URL yang diambil, lakukan pengambilan data JSON, lalu **modi
 ## Penjelasan Script
 
 ### 1. `main.py` — Scraping Judul Tabel dan WebAPI URL
+Script ini melakukan scraping otomatis pada halaman statistik BPS untuk:
+
+Mengambil seluruh daftar subjek, kategori, judul tabel statistik, dan WebAPI URL JSON (otomatis klik tombol JSON pada tiap tabel).
+
+Data hasil scraping langsung disimpan ke file bps_all_tables.csv.
+
+Script ini sudah diuji coba dan berhasil mengambil data lebih dari 500+ tabel BPS secara otomatis.
 
 ### 2. `2.py` — PARSING WebAPI URL
+
+Script ini digunakan untuk:
+
+Mengambil data statistik pendidikan dari WebAPI BPS (API JSON) untuk Angka Harapan Lama Sekolah (HLS) berdasarkan jenis kelamin tahun 2024.
+
+Melakukan parsing dan transformasi data menjadi tabel dengan kolom: provinsi, kabupaten_kota, laki_laki, perempuan, tahun.
+
+Menyajikan data dalam tampilan web (Flask), serta menyediakan fitur download CSV otomatis via endpoint /bps-hls-csv.
+
+Script ini telah diuji coba dan berhasil mengambil serta memproses data seluruh Indonesia secara otomatis ke format yang siap simpan database atau diolah lebih lanjut.
 
 ## Dependensi
 
