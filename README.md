@@ -11,10 +11,10 @@
 pip install -r requirements.txt
 python main.py (No 1)
 python 2.py (No 2)
+```
 
 
 
----
 
 ## Penjelasan Script
 
