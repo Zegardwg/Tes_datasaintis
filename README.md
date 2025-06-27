@@ -38,13 +38,94 @@ Dari salah satu API URL yang diambil, lakukan pengambilan data JSON, lalu **modi
 ## Penjelasan Script
 
 ### 1. `main.py` — Scraping Judul Tabel dan WebAPI URL
-Script ini melakukan scraping otomatis pada halaman statistik BPS untuk:
 
-Mengambil seluruh daftar subjek, kategori, judul tabel statistik, dan WebAPI URL JSON (otomatis klik tombol JSON pada tiap tabel).
 
-Data hasil scraping langsung disimpan ke file bps_all_tables.csv.
+## Flow Script
+┌────────────────────┐
+│     Start Script   │
+└────────┬───────────┘
+         │
+         ▼
+1. Buka halaman:
+   https://www.bps.go.id/id/statistics-table?subject=528
+         │
+         ▼
+2. Expand seluruh tombol accordion untuk menampilkan subjek
+         │
+         ▼
+3. Loop setiap subjek:
+   └─ Ambil nama subjek
+   └─ Loop kategori di dalamnya:
+      └─ Ambil nama kategori & URL
+         │
+         ▼
+4. Untuk setiap kategori:
+   └─ Kunjungi URL kategori
+   └─ Tunggu loading selesai
+   └─ Periksa apakah ada pagination
+         │
+         ▼
+5. Loop setiap halaman:
+   └─ Jika bukan halaman pertama, klik pagination
+   └─ Tunggu loading selesai
+   └─ Tunggu tabel stabil (jumlah tidak berubah dalam durasi tertentu)
+         │
+         ▼
+6. Loop setiap tabel di halaman:
+   └─ Scroll ke tabel
+   └─ Tutup popup jika muncul
+   └─ Klik tabel untuk buka detail
+         ├─ Jika gagal klik:
+         │   └─ Logging dan lanjut ke tabel berikutnya
+         │
+         └─ Jika berhasil:
+             └─ Ambil judul tabel (h1)
+             └─ Klik tombol `JSON`
+             └─ Ambil URL WebAPI
+                 ├─ Jika gagal:
+                 │   └─ Reload halaman kategori
+                 │   └─ Simpan hasil kosong
+                 │
+                 └─ Jika berhasil:
+                     └─ Simpan ke hasil (CSV)
+                     └─ Kembali ke halaman kategori
+         │
+         ▼
+7. Simpan hasil ke CSV setiap kali data berhasil diambil
+         │
+         ▼
+8. Setelah semua kategori selesai:
+   └─ Cetak informasi kategori kosong (jika ada)
+         │
+         ▼
+9. Simpan semua hasil akhir
+         │
+         ▼
+    ┌──────────────┐
+    │ End of Script│
+    └──────────────┘
 
-Script ini sudah diuji coba dan berhasil mengambil data lebih dari 500+ tabel BPS secara otomatis.
+
+## Error Handling dan Safety Check
+Jenis Error	Solusi di Script
+**1. Loading Spinner terlalu lama**	
+Timeout ditangani dengan warning → lanjut proses
+**2. Tombol pagination tidak bisa diklik**	
+Retry klik hingga 4 kali → log warning/error
+**3. Judul tabel kosong / error**
+klik	Lewati dengan logging, tanpa hentikan proses
+**4. Gagal ambil endpoint JSON**
+Dianggap gagal → reload halaman → skip satu tabel
+**5. Popup muncul saat klik tabel**
+Script otomatis close popup dulu
+**6. KeyboardInterrupt (Ctrl+C)**
+Tangkap KeyboardInterrupt → hasil tetap disimpan
+
+## Update hasil
+- **WebAPI URL**: Hasil pada [WebAPI_KEY] sudah otomatis diupdate dengan URL yang baru dengan BPS APIs provides programmatic access to read BPS data
+- **Hasil Scraping**: Sudah di Uji Coba secara Berkala dapat Mengambil seluruh secara 100% Valid 
+- **Testi Tabel**: berasil mengambil 1000 Tabel dengan 1000 Subjek,katagori,Judul,web Url Tabel yang Valid
+
 
 ### 2. `2.py` — PARSING WebAPI URL
 

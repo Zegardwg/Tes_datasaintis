@@ -3,12 +3,25 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.common.exceptions import TimeoutException
 import time
 import csv
+import logging
+
+# Konfigurasi logging utama
+logging.basicConfig( 
+    filename='scraper_error.log',             # File log output
+    level=logging.DEBUG,                      
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%d-%m-%Y %H:%M:%S'
+)
+
+# Nonaktifkan log internal dari selenium agar tidak mengganggu
+logging.getLogger('selenium').setLevel(logging.WARNING)
+logging.getLogger('urllib3').setLevel(logging.WARNING)
 
 def save_results_to_csv(results, filename="bps_all_tables.csv"):
-    fieldnames = ["subjek","kategori","tabel_ringkas","tabel_lengkap","endpoint"]
+    fieldnames = ["subjek", "kategori", "Judul Tabel", "WebAPI URL"]
     with open(filename, "w", newline='', encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -21,6 +34,7 @@ def tunggu_loading_selesai(driver, timeout=35):
         )
     except TimeoutException:
         print("[WARN] Spinner loading masih ada setelah timeout, lanjutkan saja.")
+        logging.warning(" Spinner loading masih muncul setelah timeout, lanjutkan...")
 
 def tunggu_tabel_stabil(driver, selector, min_jumlah=1, max_wait=45, stable_seconds=4):
     start = time.time()
@@ -39,31 +53,79 @@ def tunggu_tabel_stabil(driver, selector, min_jumlah=1, max_wait=45, stable_seco
             return tabels
         time.sleep(1.0)
 
-def klik_pagination_page(driver, wait, page_num):
-    try:
-        page_btn = wait.until(
-            EC.element_to_be_clickable(
-                (By.XPATH, f"//button[@type='button' and normalize-space(text())='{page_num}']")
+def klik_pagination_page(driver, wait, page_num, max_retry=4):
+    last_error = ""
+    for attempt in range(1, max_retry+1):
+        try:
+            # Jika page_num belum muncul, klik page_num - 1 terlebih dahulu
+            try:
+                driver.find_element(By.XPATH, f"//button[normalize-space(text())='{page_num}']")
+            except:
+                if page_num > 1:
+                    print(f"[INFO] Halaman {page_num} belum muncul, klik dulu halaman {page_num - 1}")
+                    klik_pagination_page(driver, wait, page_num - 1)
+                    time.sleep(2)
+                    tunggu_loading_selesai(driver)
+
+            # Setelah muncul, baru lanjut klik seperti biasa
+            page_btn = wait.until(
+                EC.presence_of_element_located(
+                    (By.XPATH, f"//button[@type='button' and normalize-space(text())='{page_num}']")
+                )
             )
-        )
-        page_btn.click()
-        print(f"[INFO] Klik page {page_num}")
-        time.sleep(2.5)
-        tunggu_loading_selesai(driver, timeout=20)
-        time.sleep(1.5)
-    except Exception as e:
-        print(f"[WARN] Tidak bisa klik page {page_num}: {e}")
+
+            # Skip jika sudah aktif
+            if page_btn.get_attribute('data-active') == 'true' or page_btn.get_attribute('aria-current') == 'page':
+                print(f"[INFO] Page {page_num} sudah aktif, skip klik.")
+                return
+
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", page_btn)
+            time.sleep(0.4)
+
+            try:
+                close_btn = driver.find_element(By.CSS_SELECTOR, "button[aria-label='Close']")
+                if close_btn.is_displayed():
+                    close_btn.click()
+                    time.sleep(0.4)
+            except:
+                pass
+
+            wait.until(EC.element_to_be_clickable(
+                (By.XPATH, f"//button[@type='button' and normalize-space(text())='{page_num}']")
+            ))
+
+            try:
+                page_btn.click()
+            except Exception:
+                driver.execute_script("arguments[0].click();", page_btn)
+
+            print(f"[INFO] Klik page {page_num} (percobaan {attempt})")
+            time.sleep(2.2)
+            tunggu_loading_selesai(driver, timeout=20)
+            time.sleep(1.2)
+            return
+
+        except Exception as e:
+            last_error = str(e)
+            print(f"[WARN] Gagal klik page {page_num} percobaan-{attempt}: {e}")
+            logging.warning(f"[WARN] Gagal klik page {page_num} percobaan-{attempt}: {e}")
+            time.sleep(2)
+
+    print(f"[ERROR] Gagal klik page {page_num} setelah {max_retry} kali: {last_error}")
+    logging.erorr(f"[ERROR] Gagal klik page {page_num} setelah {max_retry} kali: {last_error}")
+
+
 
 def main():
     driver = webdriver.Chrome()
     wait = WebDriverWait(driver, 40)
-
     results = []
     empty_cats = []
+
     try:
         driver.get('https://www.bps.go.id/id/statistics-table?subject=528')
 
-        #Ambil mapping subjek - kategori - url 
+        # Ambil mapping subjek - kategori - url
         data_links = []
         for btn in driver.find_elements(By.CSS_SELECTOR, "button.transition-all"):
             try:
@@ -100,10 +162,11 @@ def main():
                     "url": link.get_attribute("href")
                 })
 
+        # Loop per kategori
         for entry in data_links:
-            subjek   = entry["subjek"]
+            subjek = entry["subjek"]
             kategori = entry["kategori"]
-            url      = entry["url"]
+            url = entry["url"]
 
             print(f"\n>> SUBJEK: {subjek} | KATEGORI: {kategori}")
             driver.get(url)
@@ -111,7 +174,7 @@ def main():
             tunggu_loading_selesai(driver, timeout=30)
             time.sleep(2)
 
-            # Cek jumlah halaman
+            # Cek jumlah halaman (pagination)
             try:
                 paginations = driver.find_elements(By.CSS_SELECTOR, "button.mantine-Pagination-control")
                 last_page = 1
@@ -139,7 +202,6 @@ def main():
                 table_indexes = list(range(len(tabels)))
                 idx = 0
                 while idx < len(table_indexes):
-                    # Pastikan selalu reload posisi
                     if page_num != 1:
                         klik_pagination_page(driver, wait, page_num)
                     tunggu_loading_selesai(driver, timeout=20)
@@ -150,8 +212,8 @@ def main():
                         continue
                     cell = tabels[idx]
                     try:
-                        brief_title = cell.text.strip() or f"UNKNOWN_TABEL_{idx+1}"
-                        print(f"  [hal {page_num}][{idx+1}/{total}] {brief_title}")
+                        judul_tabel = cell.text.strip() or f"UNKNOWN_TABEL_{idx+1}"
+                        print(f"  [hal {page_num}][{idx+1}/{total}] {judul_tabel}")
                     except Exception as e:
                         print(f"(STUCK TABLE ke-{idx+1}): {e}")
                         idx += 1
@@ -177,20 +239,20 @@ def main():
                         time.sleep(2.2)
                     except Exception as e:
                         print(f"    (Gagal klik tabel ke-{idx+1}: {e})")
+                        logging.erorr(f"    (Gagal klik tabel ke-{idx+1}: {e})")
                         idx += 1
                         continue
 
                     error_or_reload = False
-                    # Cek Judul
                     try:
-                        full_title = WebDriverWait(driver, 5).until(
+                        full_judul = WebDriverWait(driver, 5).until(
                             EC.visibility_of_element_located((By.CSS_SELECTOR, "h1.font-bold.text-xl.text-main-primary.mb-4"))
                         ).text.strip()
                     except Exception as e:
                         print("    [ERROR] Tidak bisa mengambil judul, reload halaman list!")
+                        logging.error("    [ERROR] Tidak bisa mengambil judul, reload halaman list!")
                         error_or_reload = True
 
-                    #Cek JSON
                     endpoint = ""
                     if not error_or_reload:
                         try:
@@ -205,16 +267,16 @@ def main():
                             ).get_attribute("value")
                         except Exception as e:
                             print("    [ERROR] Tidak menemukan tombol JSON atau gagal ambil endpoint, reload halaman list!")
+                            logging.error("    [ERROR] Tidak menemukan tombol JSON atau gagal ambil endpoint, reload halaman list!")
                             error_or_reload = True
 
                     if error_or_reload:
-                        # Catat tetap (endpoint kosong)
                         results.append({
                             "subjek": subjek,
                             "kategori": kategori,
-                            "tabel_ringkas": brief_title,
-                            "tabel_lengkap": "TIDAK BISA AMBIL DETAIL ATAU ENDPOINT",
-                            "endpoint": ""
+                            "Judul Tabel": judul_tabel,
+                            # "judul_detail": "TIDAK BISA AMBIL DETAIL ATAU ENDPOINT",
+                            "WebAPI URL": "TIDAK BISA AMBIL DETAIL ATAU ENDPOINT"
                         })
                         save_results_to_csv(results)
                         print("    [INFO] Hard reload ke halaman kategori (skip tabel ini).")
@@ -227,7 +289,6 @@ def main():
                         idx += 1
                         continue
 
-                    #Tutup popup JSON & kembali
                     for locator in [
                         (By.CSS_SELECTOR, "button svg.fa-xmark"),
                         (By.XPATH, "//button[contains(., 'Kembali')]")
@@ -239,20 +300,28 @@ def main():
                         except:
                             pass
 
-                    #Simpan hasil
                     results.append({
                         "subjek": subjek,
                         "kategori": kategori,
-                        "tabel_ringkas": brief_title,
-                        "tabel_lengkap": full_title,
-                        "endpoint": endpoint
+                        "Judul Tabel": judul_tabel,
+                        # "judul_detail": full_judul,
+                        "WebAPI URL": endpoint.replace("[WebAPI_KEY]", "921504506b78d644648e514971ac0d28")
                     })
-                    save_results_to_csv(results)  # Auto-save setiap ada data baru
-                    print(f"    → {full_title}")
+                    save_results_to_csv(results)
+                    print(f"    → {full_judul}")
                     print(f"    → {endpoint}")
                     time.sleep(1.6)
 
                     idx += 1
+
+                # Klik ulang halaman untuk refresh state sebelum lanjut
+                try:
+                    klik_pagination_page(driver, wait, page_num)
+                    time.sleep(2)
+                    tunggu_loading_selesai(driver, timeout=20)
+                except Exception as e:
+                    print(f"[WARN] Gagal klik ulang page {page_num}: {e}")
+                    logging.warning(f"[WARN] Gagal klik ulang page {page_num}: {e}")
 
                 page_num += 1
 
@@ -263,6 +332,7 @@ def main():
         save_results_to_csv(results)
     except Exception as e:
         print(f"\n[ERROR] Terjadi error: {e}. Simpan data CSV sebelum keluar...")
+        logging.erorr(f"\n[ERROR] Terjadi error: {e}. Simpan data CSV sebelum keluar...")
         save_results_to_csv(results)
         raise
     finally:

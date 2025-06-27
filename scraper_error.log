@@ -1,0 +1,625 @@
+27-06-2025 00:46:41 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 00:46:41 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 00:48:26 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 00:48:29 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 00:48:38 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 00:48:48 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53242C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/actions
+27-06-2025 00:48:52 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5324230>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/actions
+27-06-2025 00:48:56 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC52F28A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/actions
+27-06-2025 00:49:01 - WARNING - (Gagal klik tabel ke-1: HTTPConnectionPool(host='localhost', port=53734): Max retries exceeded with url: /session/313eee8f14a7800de13f742a4c0572d4/actions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5324C80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')))
+27-06-2025 00:49:05 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5324FB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:49:09 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53251F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:49:13 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5325460>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:49:17 - INFO - Halaman 2 belum muncul, klik dulu halaman 1
+27-06-2025 00:49:21 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5325A60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:49:25 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5325CD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:49:29 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5325F40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:49:37 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326510>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:49:41 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326780>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:49:45 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53269F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:49:49 - WARNING - Gagal klik halaman 1 (coba ke-1): HTTPConnectionPool(host='localhost', port=53734): Max retries exceeded with url: /session/313eee8f14a7800de13f742a4c0572d4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC52F2AE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+27-06-2025 00:49:56 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326120>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:00 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53260F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:04 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5325CA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:12 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326B70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:16 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326DB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:20 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327020>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:24 - WARNING - Gagal klik halaman 1 (coba ke-2): HTTPConnectionPool(host='localhost', port=53734): Max retries exceeded with url: /session/313eee8f14a7800de13f742a4c0572d4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+27-06-2025 00:50:30 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53275C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:34 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327800>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:38 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327A70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:46 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5378080>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:50 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327770>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:54 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327CB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:50:59 - WARNING - Gagal klik halaman 1 (coba ke-3): HTTPConnectionPool(host='localhost', port=53734): Max retries exceeded with url: /session/313eee8f14a7800de13f742a4c0572d4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327830>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+27-06-2025 00:51:05 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:51:09 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326F30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:51:13 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53272F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:51:21 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53244D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:51:25 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326090>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:51:29 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53258E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:51:33 - WARNING - Gagal klik halaman 1 (coba ke-4): HTTPConnectionPool(host='localhost', port=53734): Max retries exceeded with url: /session/313eee8f14a7800de13f742a4c0572d4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5325FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+27-06-2025 00:51:35 - ERROR - Gagal klik halaman 1 setelah 4 kali: HTTPConnectionPool(host='localhost', port=53734): Max retries exceeded with url: /session/313eee8f14a7800de13f742a4c0572d4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5325FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+27-06-2025 00:51:41 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53263F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:51:45 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5378140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:51:49 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5378440>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:51:53 - WARNING - Gagal klik halaman 2 (coba ke-1): HTTPConnectionPool(host='localhost', port=53734): Max retries exceeded with url: /session/313eee8f14a7800de13f742a4c0572d4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53786B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+27-06-2025 00:52:00 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5324680>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:04 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5325AC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:08 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326090>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:12 - INFO - Halaman 2 belum muncul, klik dulu halaman 1
+27-06-2025 00:52:16 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:20 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327260>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:24 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53271A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:32 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5324710>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:36 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327950>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:40 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327A10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:44 - WARNING - Gagal klik halaman 1 (coba ke-1): HTTPConnectionPool(host='localhost', port=53734): Max retries exceeded with url: /session/313eee8f14a7800de13f742a4c0572d4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5378800>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+27-06-2025 00:52:50 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5378A10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:55 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5378C50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:52:59 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5378EC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:53:07 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327CE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:53:11 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5327800>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:53:15 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326C60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:53:19 - WARNING - Gagal klik halaman 1 (coba ke-2): HTTPConnectionPool(host='localhost', port=53734): Max retries exceeded with url: /session/313eee8f14a7800de13f742a4c0572d4/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5324CE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+27-06-2025 00:53:25 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326D50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:53:29 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5326F60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:53:33 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53788F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4/element
+27-06-2025 00:53:41 - INFO - 
+[INFO] Dihentikan oleh user. Simpan hasil...
+27-06-2025 00:53:45 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC53796A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4
+27-06-2025 00:53:49 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5379880>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4
+27-06-2025 00:53:53 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027FC5379A60>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/313eee8f14a7800de13f742a4c0572d4
+27-06-2025 01:04:26 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 01:04:28 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:04:38 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:04:54 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:05:14 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:05:31 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:05:31 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:05:35 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:05:40 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:05:54 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:06:12 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:06:29 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:06:46 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:07:04 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:07:21 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:07:38 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:07:56 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:08:13 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:08:31 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:08:40 - INFO - 
+[INFO] Dihentikan oleh user. Simpan hasil...
+27-06-2025 01:08:40 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/3ccb9766e13c800f09f5701ed863b78c
+27-06-2025 01:08:45 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023A8D9601A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3ccb9766e13c800f09f5701ed863b78c
+27-06-2025 01:08:49 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023A8D960AA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3ccb9766e13c800f09f5701ed863b78c
+27-06-2025 01:14:43 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 01:14:46 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:14:55 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:15:09 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:15:09 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:15:13 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:15:18 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:15:32 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:15:32 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:15:36 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:15:41 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:15:55 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:15:55 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:15:59 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:16:04 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:16:18 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:16:36 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:16:53 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:17:11 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:17:28 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:17:46 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:18:03 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:18:21 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:18:38 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:18:55 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:19:13 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:19:30 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:19:48 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:20:05 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:20:22 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:20:40 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:20:57 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:21:03 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:21:13 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 01:21:27 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:21:44 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:22:01 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:22:19 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:22:36 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:22:53 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:22:53 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:22:58 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:23:03 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 01:23:17 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:23:17 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:23:21 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:23:26 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 01:23:40 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:28:37 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 01:28:40 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:28:49 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:29:03 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:29:23 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:29:43 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:30:01 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:30:18 - INFO - Halaman 2 belum muncul, klik dulu halaman 1
+27-06-2025 01:30:18 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 01:30:21 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:30:38 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:30:55 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:31:13 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:31:30 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:31:47 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:32:04 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:32:22 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:32:39 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:32:56 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:33:14 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:33:31 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:33:48 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:34:06 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:34:23 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:34:40 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:34:46 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:34:56 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 01:35:10 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:35:27 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:35:44 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:36:02 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:36:19 - INFO - Halaman 3 belum muncul, klik dulu halaman 2
+27-06-2025 01:36:19 - INFO - Halaman 2 belum muncul, klik dulu halaman 1
+27-06-2025 01:36:20 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 01:36:22 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:36:28 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:36:45 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:37:03 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:37:20 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:37:38 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:37:57 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:38:14 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:38:35 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:38:53 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:39:10 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:39:31 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:39:54 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:40:15 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:40:32 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:40:50 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 01:40:58 - INFO - 
+[INFO] Dihentikan oleh user. Simpan hasil...
+27-06-2025 01:49:18 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:49:18 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:49:38 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:49:38 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:49:58 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:49:58 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:50:17 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:50:17 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:50:49 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:50:49 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:50:55 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 01:50:57 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:51:07 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:51:21 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:51:21 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:51:25 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:51:30 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:51:44 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:52:01 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:52:01 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:52:06 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:52:11 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:52:25 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:52:42 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:52:59 - INFO - Halaman 2 belum muncul, klik dulu halaman 1
+27-06-2025 01:53:19 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 01:53:21 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:53:39 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:53:46 - INFO - 
+[INFO] Dihentikan oleh user. Simpan hasil...
+27-06-2025 01:53:46 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/b8491be36d0e32d88a36313b4ea58950
+27-06-2025 01:58:51 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 01:58:53 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:59:03 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:59:17 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 01:59:17 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 01:59:21 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 01:59:26 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 01:59:42 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:00:02 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:00:19 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:00:36 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:00:54 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:01:11 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:01:28 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:01:46 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:02:03 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:02:20 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:02:38 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:02:55 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:03:12 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:03:30 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:03:47 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:04:05 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:04:22 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:04:39 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:04:57 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:05:03 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:05:12 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 02:05:26 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:05:43 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:06:01 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:06:18 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:06:35 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:06:53 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:06:53 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:06:57 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:07:02 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 02:07:16 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:07:16 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:07:21 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:07:26 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 02:07:39 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:09:05 - INFO - 
+[INFO] Dihentikan oleh user. Simpan hasil...
+27-06-2025 02:09:05 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/ad3bd218d7d63e13b28f7c602cf12eb4
+27-06-2025 02:15:49 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:15:49 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:17:40 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 02:17:42 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:17:52 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 02:18:08 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:18:28 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:18:48 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:19:06 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:19:23 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:19:40 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:19:58 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:20:15 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:20:32 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:20:49 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:21:07 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:21:24 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:21:41 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:21:59 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:22:16 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:22:33 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:22:51 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:23:08 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:23:25 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:23:34 - INFO - Halaman 2 belum muncul, klik dulu halaman 1
+27-06-2025 02:23:46 - INFO - Klik halaman 1 (percobaan ke-1)
+27-06-2025 02:23:52 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:23:58 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:28:53 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 02:28:55 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:29:05 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 02:29:19 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:29:36 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:29:36 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:29:41 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:29:46 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 02:30:02 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:30:20 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:30:37 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:30:54 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:31:12 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:31:29 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:31:46 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:32:04 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:32:21 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:32:38 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:32:55 - INFO - Halaman 2 belum muncul, klik dulu halaman 1
+27-06-2025 02:32:56 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 02:32:58 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:33:15 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:33:33 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:33:50 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:34:07 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:34:25 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:34:42 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:34:59 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 02:35:05 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:35:15 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 02:35:29 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:35:46 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:36:04 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:36:21 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:36:38 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:36:56 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:37:13 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:37:31 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:37:48 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:38:05 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:38:05 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:38:10 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:38:15 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 02:38:29 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:38:46 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:38:46 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:38:50 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:38:55 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 02:39:09 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:39:27 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:39:44 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:39:44 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:39:48 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:39:53 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 02:40:07 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:40:07 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:40:12 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:40:17 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 02:40:31 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:40:31 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:40:35 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:40:40 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 02:40:54 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:41:11 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:41:29 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 02:41:35 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:41:44 - INFO - Halaman 4 sudah aktif, lewati klik.
+27-06-2025 02:41:58 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:42:15 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:42:33 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:42:50 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:43:07 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:43:25 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:43:42 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:44:00 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:44:17 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:44:34 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:44:52 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:45:09 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:45:26 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:45:44 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:46:01 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:46:18 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:46:36 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:46:53 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:47:10 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:47:28 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 02:47:34 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:47:43 - INFO - Halaman 5 sudah aktif, lewati klik.
+27-06-2025 02:47:57 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:48:15 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:48:32 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:48:49 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:48:49 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:48:53 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:48:58 - INFO - Halaman 5 sudah aktif, lewati klik.
+27-06-2025 02:49:12 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:49:12 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:49:18 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:49:23 - INFO - Halaman 5 sudah aktif, lewati klik.
+27-06-2025 02:49:37 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:49:37 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:49:41 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:49:46 - INFO - Halaman 5 sudah aktif, lewati klik.
+27-06-2025 02:50:00 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:50:00 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:50:05 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:50:10 - INFO - Halaman 5 sudah aktif, lewati klik.
+27-06-2025 02:50:26 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:50:43 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:50:43 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:50:48 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:50:53 - INFO - Halaman 5 sudah aktif, lewati klik.
+27-06-2025 02:51:07 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:51:07 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:51:11 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:51:16 - INFO - Halaman 5 sudah aktif, lewati klik.
+27-06-2025 02:51:33 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:51:53 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:52:13 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:52:30 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:52:48 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:53:05 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:53:23 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:53:40 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:53:57 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:54:14 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 02:54:20 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 02:54:30 - INFO - Halaman 6 sudah aktif, lewati klik.
+27-06-2025 02:54:44 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:54:44 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:54:48 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 02:54:53 - INFO - Halaman 6 sudah aktif, lewati klik.
+27-06-2025 02:55:07 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:55:07 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:55:11 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 02:55:16 - INFO - Halaman 6 sudah aktif, lewati klik.
+27-06-2025 02:55:30 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:55:30 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:55:35 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 02:55:39 - INFO - Halaman 6 sudah aktif, lewati klik.
+27-06-2025 02:55:53 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:55:53 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:55:58 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 02:56:03 - INFO - Halaman 6 sudah aktif, lewati klik.
+27-06-2025 02:56:16 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:56:16 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:56:22 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 02:56:27 - INFO - Halaman 6 sudah aktif, lewati klik.
+27-06-2025 02:56:41 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 02:56:41 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 02:56:45 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 02:56:50 - INFO - Halaman 6 sudah aktif, lewati klik.
+27-06-2025 03:01:33 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 03:01:35 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:01:45 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 03:01:59 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:02:16 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:02:33 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:02:51 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:03:08 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:03:26 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:03:43 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:04:00 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:04:18 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:04:35 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:04:53 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:05:10 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:05:28 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:05:45 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:06:02 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:06:20 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:06:37 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:06:54 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:07:12 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:07:29 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:07:35 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:07:45 - INFO - Halaman 3 sudah aktif, lewati klik.
+27-06-2025 03:07:59 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:08:16 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:08:33 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:08:51 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:09:08 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:09:25 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:09:43 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:10:00 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:10:18 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:10:35 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:10:52 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:11:10 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:11:27 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:11:45 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:12:02 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:12:19 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:12:37 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:12:54 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:13:11 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:13:29 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:13:35 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:13:44 - INFO - Halaman 4 sudah aktif, lewati klik.
+27-06-2025 03:13:58 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:14:16 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:14:33 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:14:50 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:15:08 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:15:25 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:15:42 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:16:00 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:16:17 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:16:34 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:16:52 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:17:09 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:17:27 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:17:44 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:18:01 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:18:19 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:18:36 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:18:54 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:19:11 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:19:29 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:19:34 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:19:44 - INFO - Halaman 5 sudah aktif, lewati klik.
+27-06-2025 03:19:58 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:20:15 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:20:33 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:20:50 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:21:07 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:21:25 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:21:42 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:21:59 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:22:17 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:22:34 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:22:51 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:23:09 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:23:26 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:23:44 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:24:01 - ERROR - Gagal ambil judul lengkap, reload halaman.
+27-06-2025 03:24:01 - INFO -  Reload kategori (skip tabel ini).
+27-06-2025 03:24:05 - INFO - Halaman 5 belum muncul, klik dulu halaman 4
+27-06-2025 03:24:05 - INFO - Halaman 4 belum muncul, klik dulu halaman 3
+27-06-2025 03:24:05 - INFO - Halaman 3 belum muncul, klik dulu halaman 2
+27-06-2025 03:24:05 - INFO - Halaman 2 belum muncul, klik dulu halaman 1
+27-06-2025 03:24:05 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 03:24:08 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:24:14 - INFO - Klik halaman 3 (percobaan ke-1)
+27-06-2025 03:24:20 - INFO - Klik halaman 4 (percobaan ke-1)
+27-06-2025 03:24:26 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:24:30 - INFO - Halaman 5 sudah aktif, lewati klik.
+27-06-2025 03:24:44 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:25:02 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:25:19 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:25:37 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:25:54 - INFO - Klik halaman 5 (percobaan ke-1)
+27-06-2025 03:26:00 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:26:10 - INFO - Halaman 6 sudah aktif, lewati klik.
+27-06-2025 03:26:23 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:26:41 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:26:58 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:27:15 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:27:33 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:27:50 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:28:08 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:28:25 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:28:42 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:29:00 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:29:17 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:29:34 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:29:52 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:30:09 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:30:26 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:30:44 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:31:01 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:31:18 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:31:36 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:31:53 - INFO - Klik halaman 6 (percobaan ke-1)
+27-06-2025 03:31:59 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:32:09 - INFO - Halaman 7 sudah aktif, lewati klik.
+27-06-2025 03:32:22 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:32:40 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:32:57 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:33:15 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:33:32 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:33:49 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:34:07 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:34:24 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:34:41 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:34:59 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:35:16 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:35:34 - INFO - Klik halaman 7 (percobaan ke-1)
+27-06-2025 03:40:22 - INFO - Halaman 1 sudah aktif, lewati klik.
+27-06-2025 03:40:25 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:40:34 - INFO - Halaman 2 sudah aktif, lewati klik.
+27-06-2025 03:40:48 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:41:06 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:41:23 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:41:40 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:41:58 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:42:15 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:42:32 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:42:50 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:43:07 - INFO - Klik halaman 2 (percobaan ke-1)
+27-06-2025 03:43:16 - INFO - 
+[INFO] Dihentikan oleh user. Simpan hasil...
+27-06-2025 08:23:32 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/0aad4a576e769f2a9cc2b1750fbeac60
+27-06-2025 08:24:53 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025B1B9A8800>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/375c476e46d7becbe101e319ae582b6e
+27-06-2025 08:24:57 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025B1A895BE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/375c476e46d7becbe101e319ae582b6e
+27-06-2025 08:25:01 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025B1B9A8AA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/375c476e46d7becbe101e319ae582b6e
+27-06-2025 08:36:07 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/5d0e078db994016ee20160bceb5150cc
+27-06-2025 08:39:56 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/03dac4d107a12a8f98fed99f555c42b3
+27-06-2025 08:53:41 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 08:54:05 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:08:49 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CF45D13260>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fdcf1a3f93a04268ffc472aee9a49c98
+27-06-2025 09:33:27 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023945E98320>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b9a5430671a6d6d977e149f84d804988
+27-06-2025 09:33:32 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023945E98110>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b9a5430671a6d6d977e149f84d804988
+27-06-2025 09:33:36 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023945E98470>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b9a5430671a6d6d977e149f84d804988
+27-06-2025 09:34:16 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:34:35 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:34:55 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:35:14 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:35:34 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:35:53 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:36:12 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:36:32 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:36:51 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:37:00 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/0e8952aff8b7962731e9f9d243cd47e4
