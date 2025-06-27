@@ -84,7 +84,7 @@ Semua error ditangani dengan aman agar proses scraping tidak berhenti total, dan
 ## Update hasil
 - **WebAPI URL**: Hasil pada [WebAPI_KEY] sudah otomatis diupdate dengan URL yang baru dengan BPS APIs provides programmatic access to read BPS data
 - **Hasil Scraping**: Sudah di Uji Coba secara Berkala dapat Mengambil seluruh secara 100% Valid 
-- **Testi Tabel**: berasil mengambil 1000 Tabel dengan 1000 Subjek,katagori,Judul,web Url Tabel yang Valid
+- **Testi Tabel**: berasil mengambil 1018 Tabel dengan Subjek,katagori,Judul,web Url Tabel yang Valid pada `hasilcripingbps.csv`
 
 
 ### 2. `2.py` — PARSING WebAPI URL
