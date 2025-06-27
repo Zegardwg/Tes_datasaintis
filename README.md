@@ -108,17 +108,17 @@ Dari salah satu API URL yang diambil, lakukan pengambilan data JSON, lalu **modi
 
 ## Error Handling dan Safety Check
 Jenis Error	Solusi di Script
-**1. Loading Spinner terlalu lama**	
+-**1. Loading Spinner terlalu lama**	
 Timeout ditangani dengan warning → lanjut proses
-**2. Tombol pagination tidak bisa diklik**	
+-**2. Tombol pagination tidak bisa diklik**	
 Retry klik hingga 4 kali → log warning/error
-**3. Judul tabel kosong / error**
+-**3. Judul tabel kosong / error**
 klik	Lewati dengan logging, tanpa hentikan proses
-**4. Gagal ambil endpoint JSON**
+-**4. Gagal ambil endpoint JSON**
 Dianggap gagal → reload halaman → skip satu tabel
-**5. Popup muncul saat klik tabel**
+-**5. Popup muncul saat klik tabel**
 Script otomatis close popup dulu
-**6. KeyboardInterrupt (Ctrl+C)**
+-**6. KeyboardInterrupt (Ctrl+C)**
 Tangkap KeyboardInterrupt → hasil tetap disimpan
 
 ## Update hasil
