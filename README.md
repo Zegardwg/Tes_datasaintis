@@ -40,70 +40,51 @@ Dari salah satu API URL yang diambil, lakukan pengambilan data JSON, lalu **modi
 ### 1. `main.py` — Scraping Judul Tabel dan WebAPI URL
 
 
-## Flow Script
-┌────────────────────┐
-│     Start Script   │
-└────────┬───────────┘
-         │
-         ▼
-1. Buka halaman:
-   https://www.bps.go.id/id/statistics-table?subject=528
-         │
-         ▼
-2. Expand seluruh tombol accordion untuk menampilkan subjek
-         │
-         ▼
-3. Loop setiap subjek:
-   └─ Ambil nama subjek
-   └─ Loop kategori di dalamnya:
-      └─ Ambil nama kategori & URL
-         │
-         ▼
-4. Untuk setiap kategori:
-   └─ Kunjungi URL kategori
-   └─ Tunggu loading selesai
-   └─ Periksa apakah ada pagination
-         │
-         ▼
-5. Loop setiap halaman:
-   └─ Jika bukan halaman pertama, klik pagination
-   └─ Tunggu loading selesai
-   └─ Tunggu tabel stabil (jumlah tidak berubah dalam durasi tertentu)
-         │
-         ▼
-6. Loop setiap tabel di halaman:
-   └─ Scroll ke tabel
-   └─ Tutup popup jika muncul
-   └─ Klik tabel untuk buka detail
-         ├─ Jika gagal klik:
-         │   └─ Logging dan lanjut ke tabel berikutnya
-         │
-         └─ Jika berhasil:
-             └─ Ambil judul tabel (h1)
-             └─ Klik tombol `JSON`
-             └─ Ambil URL WebAPI
-                 ├─ Jika gagal:
-                 │   └─ Reload halaman kategori
-                 │   └─ Simpan hasil kosong
-                 │
-                 └─ Jika berhasil:
-                     └─ Simpan ke hasil (CSV)
-                     └─ Kembali ke halaman kategori
-         │
-         ▼
-7. Simpan hasil ke CSV setiap kali data berhasil diambil
-         │
-         ▼
-8. Setelah semua kategori selesai:
-   └─ Cetak informasi kategori kosong (jika ada)
-         │
-         ▼
-9. Simpan semua hasil akhir
-         │
-         ▼
-    ┌──────────────┐
-    │ End of Script│
-    └──────────────┘
+## Flow Scraping
+
+1. **Buka halaman utama statistik BPS**  
+   URL: `https://www.bps.go.id/id/statistics-table?subject=528`
+
+2. **Expand semua subjek (accordion)**  
+   Klik semua tombol untuk menampilkan kategori di setiap subjek.
+
+3. **Loop semua subjek dan kategori**
+   - Ambil nama subjek (misalnya: *Pendidikan*)
+   - Ambil semua kategori di dalamnya (misalnya: *Angka Partisipasi Sekolah*) dan URL-nya
+
+4. **Kunjungi setiap kategori**
+   - Buka URL kategori
+   - Tunggu hingga loading selesai
+   - Periksa apakah ada pagination
+
+5. **Loop per halaman (jika ada pagination)**
+   - Klik nomor halaman (jika bukan halaman pertama)
+   - Tunggu loading spinner hilang
+   - Tunggu sampai jumlah tabel stabil (tidak berubah-ubah)
+
+6. **Loop setiap tabel dalam halaman**
+   - Scroll ke elemen tabel
+   - Tutup pop-up (jika muncul)
+   - Klik sel tabel untuk masuk ke halaman detail
+
+7. **Ambil detail tabel**
+   - Ambil `Judul Tabel` dari `<h1>`
+   - Klik tombol `JSON`
+   - Ambil nilai URL WebAPI dari input field readonly
+
+8. **Error handling**
+   - Jika gagal klik tabel atau gagal ambil detail:
+     - Reload ulang halaman kategori
+     - Skip dan tetap simpan data kosong (dengan `WebAPI URL` kosong)
+
+9. **Simpan ke file CSV (`bps_all_tables.csv`)**
+   - Data disimpan setiap kali 1 tabel berhasil diambil
+   - Kolom CSV: `Subjek`, `Kategori`, `Judul Tabel`, `WebAPI URL`
+
+10. **Selesai**
+    - Cetak log kategori tanpa tabel
+    - Tutup browser dan simpan hasil akhir
+
 
 
 ## Error Handling dan Safety Check
