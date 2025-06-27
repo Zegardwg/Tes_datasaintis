@@ -88,20 +88,18 @@ Dari salah satu API URL yang diambil, lakukan pengambilan data JSON, lalu **modi
 
 
 ## Error Handling dan Safety Check
-Jenis Error	Solusi di Script
--**1. Loading Spinner terlalu lama**	
-Timeout ditangani dengan warning → lanjut proses
--**2. Tombol pagination tidak bisa diklik**	
-Retry klik hingga 4 kali → log warning/error
--**3. Judul tabel kosong / error**
-klik	Lewati dengan logging, tanpa hentikan proses
--**4. Gagal ambil endpoint JSON**
-Dianggap gagal → reload halaman → skip satu tabel
--**5. Popup muncul saat klik tabel**
-Script otomatis close popup dulu
--**6. KeyboardInterrupt (Ctrl+C)**
-Tangkap KeyboardInterrupt → hasil tetap disimpan
 
+| Jenis Error                               | Solusi dalam Script                                               |
+|-------------------------------------------|-------------------------------------------------------------------|
+| **1. Loading spinner terlalu lama**       | Timeout otomatis → diberikan peringatan (`warning`) lalu lanjut. |
+| **2. Tombol pagination tidak bisa diklik**| Retry klik hingga 4 kali → jika tetap gagal, log sebagai error.   |
+| **3. Judul tabel kosong atau error klik** | Melewati indeks tabel tersebut → logging dan lanjut ke berikutnya.|
+| **4. Gagal ambil endpoint JSON**          | Reload halaman kategori → skip tabel tersebut dan log hasil kosong.|
+| **5. Popup muncul saat klik tabel**       | Script mendeteksi dan menutup popup sebelum klik dilakukan.       |
+| **6. KeyboardInterrupt (Ctrl + C)**       | Tangkap interupsi pengguna → simpan hasil sementara sebelum keluar.|
+
+Semua error ditangani dengan aman agar proses scraping tidak berhenti total, dan data tetap disimpan secara bertahap.
+ 
 ## Update hasil
 - **WebAPI URL**: Hasil pada [WebAPI_KEY] sudah otomatis diupdate dengan URL yang baru dengan BPS APIs provides programmatic access to read BPS data
 - **Hasil Scraping**: Sudah di Uji Coba secara Berkala dapat Mengambil seluruh secara 100% Valid 
