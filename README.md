@@ -1,37 +1,18 @@
-# Jawaban Soal Scraping Web API BPS
-
-Repositori ini berisi dua script Python untuk menyelesaikan soal berikut:
-
-## Soal
-
-### 1. **Scraping API URL dari web BPS**
-Pada web bps.go.id lakukan pengambilan API URL JSON untuk mengambil judul data pada Tabel Statistik dengan klik Produk > Statistik menurut Subjek.  
-Ambil scraping **semua judul data** di Tabel Statistik dan **ambil URL Web API** (dari tombol JSON).
-
-**Hasil scraping:**
-| Subjek                           | Kategori    | Judul Tabel                                                                              | WebAPI URL                                        |
-|-----------------------------------|-------------|------------------------------------------------------------------------------------------|---------------------------------------------------|
-| Statistik Demografi dan Sosial    | Pendidikan  | Angka Harapan Lama Sekolah (HLS) menurut Jenis Kelamin (Tahun), 2024                    | https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/457/key/WebAPI_KEY |
-
----
-
-### 2. **Get data API URL dari web BPS ke CSV file**
-Dari salah satu API URL yang diambil, lakukan pengambilan data JSON, lalu **modifikasi** data menjadi tabel berikut dan **simpan ke CSV**:
-
-**Contoh hasil CSV yang diharapkan:**
-
-| provinsi | kabupaten_kota | laki_laki | perempuan | tahun |
-|----------|----------------|-----------|-----------|-------|
-| Aceh     | Simeuleu       | 14,30     | 14,62     | 2024  |
-
----
-
 ## Struktur File
 
 - **main.py**  
   Menjawab soal nomor 1 (scraping judul tabel dan WebAPI URL).
 - **2.py**  
   Menjawab soal nomor 2 (mengambil data dari WebAPI dan menyimpannya ke CSV).
+
+  #### Cara menjalankan:
+
+```bash
+pip install -r requirements.txt
+python main.py (No 1)
+python 2.py (No 2)
+
+
 
 ---
 
@@ -40,87 +21,66 @@ Dari salah satu API URL yang diambil, lakukan pengambilan data JSON, lalu **modi
 ### 1. `main.py` — Scraping Judul Tabel dan WebAPI URL
 
 
-## Flow Script
-┌────────────────────┐
-│     Start Script   │
-└────────┬───────────┘
-         │
-         ▼
-1. Buka halaman:
-   https://www.bps.go.id/id/statistics-table?subject=528
-         │
-         ▼
-2. Expand seluruh tombol accordion untuk menampilkan subjek
-         │
-         ▼
-3. Loop setiap subjek:
-   └─ Ambil nama subjek
-   └─ Loop kategori di dalamnya:
-      └─ Ambil nama kategori & URL
-         │
-         ▼
-4. Untuk setiap kategori:
-   └─ Kunjungi URL kategori
-   └─ Tunggu loading selesai
-   └─ Periksa apakah ada pagination
-         │
-         ▼
-5. Loop setiap halaman:
-   └─ Jika bukan halaman pertama, klik pagination
-   └─ Tunggu loading selesai
-   └─ Tunggu tabel stabil (jumlah tidak berubah dalam durasi tertentu)
-         │
-         ▼
-6. Loop setiap tabel di halaman:
-   └─ Scroll ke tabel
-   └─ Tutup popup jika muncul
-   └─ Klik tabel untuk buka detail
-         ├─ Jika gagal klik:
-         │   └─ Logging dan lanjut ke tabel berikutnya
-         │
-         └─ Jika berhasil:
-             └─ Ambil judul tabel (h1)
-             └─ Klik tombol `JSON`
-             └─ Ambil URL WebAPI
-                 ├─ Jika gagal:
-                 │   └─ Reload halaman kategori
-                 │   └─ Simpan hasil kosong
-                 │
-                 └─ Jika berhasil:
-                     └─ Simpan ke hasil (CSV)
-                     └─ Kembali ke halaman kategori
-         │
-         ▼
-7. Simpan hasil ke CSV setiap kali data berhasil diambil
-         │
-         ▼
-8. Setelah semua kategori selesai:
-   └─ Cetak informasi kategori kosong (jika ada)
-         │
-         ▼
-9. Simpan semua hasil akhir
-         │
-         ▼
-    ┌──────────────┐
-    │ End of Script│
-    └──────────────┘
+## Flow Scraping
+
+1. **Buka halaman utama statistik BPS**  
+   URL: `https://www.bps.go.id/id/statistics-table?subject=528`
+
+2. **Expand semua subjek (accordion)**  
+   Klik semua tombol untuk menampilkan kategori di setiap subjek.
+
+3. **Loop semua subjek dan kategori**
+   - Ambil nama subjek (misalnya: *Pendidikan*)
+   - Ambil semua kategori di dalamnya (misalnya: *Angka Partisipasi Sekolah*) dan URL-nya
+
+4. **Kunjungi setiap kategori**
+   - Buka URL kategori
+   - Tunggu hingga loading selesai
+   - Periksa apakah ada pagination
+
+5. **Loop per halaman (jika ada pagination)**
+   - Klik nomor halaman (jika bukan halaman pertama)
+   - Tunggu loading spinner hilang
+   - Tunggu sampai jumlah tabel stabil (tidak berubah-ubah)
+
+6. **Loop setiap tabel dalam halaman**
+   - Scroll ke elemen tabel
+   - Tutup pop-up (jika muncul)
+   - Klik sel tabel untuk masuk ke halaman detail
+
+7. **Ambil detail tabel**
+   - Ambil `Judul Tabel` dari `<h1>`
+   - Klik tombol `JSON`
+   - Ambil nilai URL WebAPI dari input field readonly
+
+8. **Error handling**
+   - Jika gagal klik tabel atau gagal ambil detail:
+     - Reload ulang halaman kategori
+     - Skip dan tetap simpan data kosong (dengan `WebAPI URL` kosong)
+
+9. **Simpan ke file CSV (`bps_all_tables.csv`)**
+   - Data disimpan setiap kali 1 tabel berhasil diambil
+   - Kolom CSV: `Subjek`, `Kategori`, `Judul Tabel`, `WebAPI URL`
+
+10. **Selesai**
+    - Cetak log kategori tanpa tabel
+    - Tutup browser dan simpan hasil akhir
+
 
 
 ## Error Handling dan Safety Check
-Jenis Error	Solusi di Script
-**1. Loading Spinner terlalu lama**	
-Timeout ditangani dengan warning → lanjut proses
-**2. Tombol pagination tidak bisa diklik**	
-Retry klik hingga 4 kali → log warning/error
-**3. Judul tabel kosong / error**
-klik	Lewati dengan logging, tanpa hentikan proses
-**4. Gagal ambil endpoint JSON**
-Dianggap gagal → reload halaman → skip satu tabel
-**5. Popup muncul saat klik tabel**
-Script otomatis close popup dulu
-**6. KeyboardInterrupt (Ctrl+C)**
-Tangkap KeyboardInterrupt → hasil tetap disimpan
 
+| Jenis Error                               | Solusi dalam Script                                               |
+|-------------------------------------------|-------------------------------------------------------------------|
+| **1. Loading spinner terlalu lama**       | Timeout otomatis → diberikan peringatan (`warning`) lalu lanjut. |
+| **2. Tombol pagination tidak bisa diklik**| Retry klik hingga 4 kali → jika tetap gagal, log sebagai error.   |
+| **3. Judul tabel kosong atau error klik** | Melewati indeks tabel tersebut → logging dan lanjut ke berikutnya.|
+| **4. Gagal ambil endpoint JSON**          | Reload halaman kategori → skip tabel tersebut dan log hasil kosong.|
+| **5. Popup muncul saat klik tabel**       | Script mendeteksi dan menutup popup sebelum klik dilakukan.       |
+| **6. KeyboardInterrupt (Ctrl + C)**       | Tangkap interupsi pengguna → simpan hasil sementara sebelum keluar.|
+
+Semua error ditangani dengan aman agar proses scraping tidak berhenti total, dan data tetap disimpan secara bertahap.
+ 
 ## Update hasil
 - **WebAPI URL**: Hasil pada [WebAPI_KEY] sudah otomatis diupdate dengan URL yang baru dengan BPS APIs provides programmatic access to read BPS data
 - **Hasil Scraping**: Sudah di Uji Coba secara Berkala dapat Mengambil seluruh secara 100% Valid 

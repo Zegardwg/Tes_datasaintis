@@ -623,3 +623,5 @@
 27-06-2025 09:36:32 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
 27-06-2025 09:36:51 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
 27-06-2025 09:37:00 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/0e8952aff8b7962731e9f9d243cd47e4
+27-06-2025 09:50:23 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
+27-06-2025 09:50:46 - ERROR -     [ERROR] Tidak bisa mengambil judul, reload halaman list!
