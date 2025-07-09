@@ -8,25 +8,26 @@ app = Flask(__name__)
 
 def get_bps_data():
     # Ambil data dari endpoint API BPS
-    url = "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/457/th/1,2/key/79452e4c302f8921ad36cd2bf55f0630/"
+    url = "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/461/th/124/key/921504506b78d644648e514971ac0d28"
     response = requests.get(url, timeout=10)
     data = response.json()
 
-    # Cek status code dan ketersediaan datacontent
+    # pengecekan kondisi gagal
     if response.status_code != 200 or 'datacontent' not in data:
         raise Exception("Gagal mengambil data dari API BPS.")
 
+    # Proses cleaning data
     wilayah = {}        # Mapping kode wilayah ke nama provinsi/kabupaten_kota
     current_prov = ""   # Menyimpan nama provinsi aktif
     for item in data["vervar"]:
         label = item["label"]
         # Hilangkan tag <b> dari label
         label_clean = re.sub(r"</?b>", "", label, flags=re.IGNORECASE).strip()
-        # Kondisi: Jika ada tag <b> (nama provinsi), simpan ke current_prov
+        # Kondisi: menyimpan tag <b> (nama provinsi), simpan ke current_prov
         if re.search(r"<\s*b\s*>", label, flags=re.IGNORECASE):
             current_prov = label_clean
         else:
-            # Jika bukan provinsi, berarti kabupaten/kota - simpan mappingnya
+            # jika bukan berarti kab/kota
             wilayah[str(item["val"])] = {
                 "provinsi": current_prov,
                 "kabupaten_kota": label_clean
@@ -37,10 +38,10 @@ def get_bps_data():
     kode_tahun_2024 = None
     # Cari kode tahun yang labelnya "2024"
     for k, v in tahun_map.items():
-        if v == "2024":
+        if v == "2023":
             kode_tahun_2024 = k
             break
-    # Kondisi: Jika tidak ditemukan tahun 2024, raise error
+    # Kondisi: Jika tidak ditemukan tahun 2024, erorr
     if kode_tahun_2024 is None:
         raise ValueError("Tahun 2024 tidak ditemukan di metadata tahun.")
 
